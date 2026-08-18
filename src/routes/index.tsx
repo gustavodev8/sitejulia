@@ -34,14 +34,14 @@ function Index() {
       <Hero />
 
       <section id="links" className="mx-auto w-full max-w-6xl px-5 pt-20 md:px-10 md:pt-32">
-        <div className="flex items-end justify-between gap-6">
+        <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
           <h2 className="font-display text-[11vw] uppercase leading-[0.85] tracking-[-0.03em] md:text-[5.5vw]">
             Links
           </h2>
           <p className="label-xs pb-2 text-muted-foreground">Selecionados por mim</p>
         </div>
 
-        <div className="mt-10 grid gap-10 md:grid-cols-2">
+        <div className="mt-8 grid gap-9 md:mt-10 md:grid-cols-2 md:gap-10">
           <FeaturedCard
             index="01"
             title="Instagram"
@@ -60,7 +60,7 @@ function Index() {
           />
         </div>
 
-        <div className="mt-16">
+        <div className="mt-12 md:mt-16">
           {linkCards.slice(2).map((item) => (
             <LinkCard key={item.index} item={item} />
           ))}
@@ -68,11 +68,11 @@ function Index() {
         </div>
       </section>
 
-      <section id="sobre" className="mx-auto w-full max-w-6xl px-5 py-20 md:px-10 md:py-32">
+      <section id="sobre" className="mx-auto w-full max-w-6xl border-t border-border px-5 py-20 md:px-10 md:py-32">
         <div className="grid gap-8 md:grid-cols-12">
           <p className="label-xs text-muted-foreground md:col-span-3">03 / Sobre</p>
           <motion.p
-            initial={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 1, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}

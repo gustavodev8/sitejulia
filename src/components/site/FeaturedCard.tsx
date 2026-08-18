@@ -21,8 +21,9 @@ export function FeaturedCard({
       href={href}
       target="_blank"
       rel="noreferrer"
-      initial={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 1, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
+      whileTap={{ scale: 0.985 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className="group block"

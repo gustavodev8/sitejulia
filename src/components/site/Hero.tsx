@@ -40,12 +40,12 @@ export function Hero() {
         alt="Julia Moraes, criadora de conteúdo de moda e beleza"
         width={1024}
         height={1536}
-        className="pointer-events-none absolute bottom-0 right-0 z-[1] h-[40svh] w-auto max-w-[72%] object-contain object-bottom sm:right-[-8%] sm:h-[46svh] md:right-[4%] md:h-[86svh] md:max-w-none"
+        className="hero-photo pointer-events-none absolute bottom-0 right-0 z-[1] h-[40svh] w-auto max-w-[72%] object-contain object-bottom sm:right-[-8%] sm:h-[46svh] md:right-[4%] md:h-[86svh] md:max-w-none"
       />
 
       <div className="relative z-[2] mx-auto w-full max-w-6xl px-5 pb-[40svh] pt-10 md:px-10 md:pb-16 md:pt-0">
         <motion.div
-          initial="show"
+          initial="hidden"
           animate="show"
           variants={{ show: { transition: { staggerChildren: 0.08, delayChildren: 0.15 } } }}
         >
@@ -89,11 +89,6 @@ export function Hero() {
 }
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 14 },
+  hidden: { opacity: 1, y: 14 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const } },
-};
-
-const lineUp = {
-  hidden: { y: "110%" },
-  show: { y: "0%", transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as const } },
 };

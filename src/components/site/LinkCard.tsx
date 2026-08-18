@@ -8,8 +8,9 @@ export function LinkCard({ item }: { item: LinkCardItem }) {
       href={item.href}
       target="_blank"
       rel="noreferrer"
-      initial={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 1, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
+      whileTap={{ scale: 0.99 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className="group relative block border-t border-border py-7 transition-colors hover:bg-foreground hover:text-background"
