@@ -15,7 +15,7 @@ export function Hero() {
     <section
       id="inicio"
       ref={ref}
-      className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden pt-24"
+      className="relative flex min-h-[100svh] flex-col justify-start overflow-hidden pt-24 md:justify-end"
     >
       {/* background typography */}
       <motion.div
@@ -40,10 +40,10 @@ export function Hero() {
         alt="Julia Moraes, criadora de conteúdo de moda e beleza"
         width={1024}
         height={1536}
-        className="hero-photo pointer-events-none absolute bottom-0 right-0 z-[1] h-[40svh] w-auto max-w-[72%] object-contain object-bottom sm:right-[-8%] sm:h-[46svh] md:right-[4%] md:h-[86svh] md:max-w-none"
+        className="hero-photo pointer-events-none absolute left-0 top-24 z-[1] h-[30svh] w-full max-w-none object-cover object-[center_24%] sm:right-[-8%] sm:top-auto sm:bottom-0 sm:left-auto sm:h-[46svh] sm:w-auto sm:max-w-[72%] sm:object-contain sm:object-bottom md:right-[4%] md:top-auto md:h-[86svh] md:max-w-none"
       />
 
-      <div className="relative z-[2] mx-auto w-full max-w-6xl px-5 pb-[40svh] pt-10 md:px-10 md:pb-16 md:pt-0">
+      <div className="relative z-[2] mx-auto mt-[30svh] w-full max-w-6xl bg-background px-5 pb-12 pt-7 sm:mt-0 sm:bg-transparent sm:pb-[40svh] sm:pt-10 md:px-10 md:pb-16 md:pt-0">
         <motion.div
           initial="hidden"
           animate="show"
@@ -63,7 +63,7 @@ export function Hero() {
 
           <div className="rule-line my-5" />
 
-          <h1 className="font-display text-[7.8vw] uppercase leading-[1] tracking-[-0.03em] md:text-[6.4vw]">
+          <h1 className="font-display text-[clamp(2.75rem,11vw,4.5rem)] uppercase leading-[0.94] tracking-[-0.03em] md:text-[6.4vw]">
             {headline.map((line, i) => (
               <motion.span key={line} variants={fadeUp} className="block">
                 {i === 2 ? (
@@ -77,7 +77,6 @@ export function Hero() {
               </motion.span>
             ))}
           </h1>
-
 
           <motion.p variants={fadeUp} className="mt-5 max-w-sm text-sm text-muted-foreground">
             {profile.role}
